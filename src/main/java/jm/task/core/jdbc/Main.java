@@ -16,15 +16,16 @@ public class Main {
 //        UserDao userService = new UserDaoJDBCImpl();
         UserService userService = new UserServiceImpl();
             userService.createUsersTable(); // create table if NOT exist
-            userService.saveUser("Ivan", "Ivanov", (byte) 25);
-            userService.saveUser("Petr", "Petrov", (byte) 26);
-            userService.saveUser("Sidor", "Sidorov", (byte) 27);
-            userService.saveUser("Egor", "Egorov", (byte) 28);
+            userService.saveUser("Alex", "Ivanov", (byte) 125);
+            userService.saveUser("Petr", "Petrov", (byte) 36);
+            userService.saveUser("Sidor", "Sidorov", (byte) 227);
+            userService.saveUser("Egor", "Egorov", (byte) 18);
+            userService.saveUser("Igor", "Igorov", (byte) 38);
             userService.getAllUsers(); //get all users from DB and print it out
-            userService.removeUserById(1); // delete user
-//            userService.cleanUsersTable();
-//            userService.getAllUsers(); //get all users from DB and print it out
-            userService.dropUsersTable(); // delete table if exist
+            userService.removeUserById(3); // delete user
+            userService.cleanUsersTable(); // remove ALL users from table
+            userService.getAllUsers(); // check if all users removed
+            userService.dropUsersTable(); // delete/drop table if exist
 
         
     }
